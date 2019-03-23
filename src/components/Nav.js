@@ -3,24 +3,36 @@ import '../css/Nav.css'
 
 class Nav extends React.Component {
     state = { 
+        active: false
      }
 
+     handleClick = ()=>{
+         this.setState({
+             active: !this.state.active,
+         })
+     }
+
+     
+     
     render() { 
+
+        const {active} = this.state;
+
         return (
         <>
-        <button className='navBtn'>
-            <span className='top bar'></span>
-            <span className='mid bar'></span>
-            <span className='bot bar'></span>
+        <button className='navBtn' onClick={this.handleClick}>
+            <span className={active ? 'top bar active' : 'top bar'}></span>
+            <span className={active ? 'mid bar active' : 'mid bar'}></span>
+            <span className={active ? 'bot bar active' : 'bot bar'}></span>
         </button>
       
-        <nav>
+        <nav className={active ? 'active' : ''}>
             <ul>
-                <li><span className='number'>01</span><span className='txt'>Start</span></li>
-                <li><span className='number'>02</span><span className='txt'>O nas</span></li>
-                <li><span className='number'>03</span><span className='txt'>Oferta</span></li>
-                <li><span className='number'>04</span><span className='txt'>Gdzie nas znajdziesz</span></li>
-                <li><span className='number'>05</span><span className='txt'>Kontakt</span></li>
+                <li><span className={active ? 'number active' : 'number'}>01</span><span className={active ? 'txt active' : 'txt'}>Start</span></li>
+                <li><span className={active ? 'number active' : 'number'}>02</span><span className={active ? 'txt active' : 'txt'}>O nas</span></li>
+                <li><span className={active ? 'number active' : 'number'}>03</span><span className={active ? 'txt active' : 'txt'}>Oferta</span></li>
+                <li><span className={active ? 'number active' : 'number'}>04</span><span className={active ? 'txt active' : 'txt'}>Gdzie nas znajdziesz</span></li>
+                <li><span className={active ? 'number active' : 'number'}>05</span><span className={active ? 'txt active' : 'txt'}>Kontakt</span></li>
             </ul>
         </nav>
         </>
