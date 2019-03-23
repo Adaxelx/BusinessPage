@@ -1,6 +1,9 @@
 import React from 'react';
 import img from '../img/img.jpg'
 import '../css/Home.css'
+
+import About from './About.js'
+
 let lastScrollY,ticking;
 
 class Home extends React.Component {
@@ -36,9 +39,7 @@ class Home extends React.Component {
                 <img ref={this.img} className='homeImg' src={img} alt=""></img>
                 <p className='logo' ref={this.logo}>Business name</p>
             </section>
-            <section>
-
-            </section>
+           <About/>
             </>
         )
     }
