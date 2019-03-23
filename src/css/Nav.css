@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+
+section{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+
+/* przycisk x*/ 
+
+.navBtn{
+    /* reset */
+
+    background-color: transparent;
+    border: none;
+
+    /* properties */ 
+
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+    width: 4rem;
+    height: 2rem;
+    z-index: 1;
+
+    /* props for bars */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* hamburger */ 
+
+.bar{
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background-color: black;
+    transition: .5s;
+}
+
+.bar.active{
+    background-color: white;
+}
+
+.top{
+    width: 2rem;
+}
+
+.top.active{
+    /* transform-origin: left; */
+    transform: rotate(45deg) translateX(50%);
+}
+
+.mid{
+    width:3.5rem;
+}
+
+.mid.active{
+    transform-origin: center;
+    transform: rotate(-225deg);
+    width:3.5rem;
+}
+
+.bot{
+    width: 2rem;
+    /* transform-origin: right; */
+    align-self: flex-end;
+}
+
+.bot.active{
+    /* transform-origin: right; */
+    transform: rotate(45deg) translateX(-65%);
+}
+
+/* po otwarciu */ 
+
+nav{
+    position: fixed;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100vh;
+    transition: .5s;
+    background-color: white;
+    
+
+    /* dla ul*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.active{
+    transform: translateX(0);
+    
+}
+
+nav ul{
+    /* reset */
+    
+    list-style-type: none;
+
+    /* properties */
+
+    font-size: 2rem;
+    height: 50vh;
+    width: 90%;
+
+    /* li */
+
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+nav ul li{
+    display: flex;
+    overflow: hidden;
+}
+nav .txt{
+    display: block;
+    transform: translateY(-120%);
+    opacity: 0.2;
+    /* transition: .5s .5s; */
+}
+nav .txt.active{
+    opacity: 1;
+    transform: translateY(0)
+}
+
+nav ul li .number{
+    display: block;
+    font-size: 1.2rem;
+    color: gray;
+    margin: 0 20% 0 5%;
+    transform: translateX(-300%);
+}
+
+nav .number.active{
+    transform: translateX(0%);
+}
