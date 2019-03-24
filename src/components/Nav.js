@@ -26,7 +26,7 @@ class Nav extends React.Component {
       
         <nav className={active ? 'active' : ''}>
             <ul>
-                <li><span className={active ? 'number active' : 'number'}>02</span><span className={active ? 'txt active' : 'txt'}>O nas</span></li>
+                <li><span className={active ? 'number active' : 'number'}>02</span><span className={active ? 'txt active' : 'txt'}>Start</span></li>
                 <li><span className={active ? 'number active' : 'number'}>03</span><span className={active ? 'txt active' : 'txt'}>Oferta</span></li>
                 <li><span className={active ? 'number active' : 'number'}>04</span><span className={active ? 'txt active' : 'txt'}>Gdzie nas znajdziesz</span></li>
                 <li><span className={active ? 'number active' : 'number'}>05</span><span className={active ? 'txt active' : 'txt'}>Kontakt</span></li>

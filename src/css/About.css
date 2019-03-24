@@ -10,36 +10,35 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
-.about{
+.aboutContent{
     width: 80%;
     transform: translateX(-120%);
     transition: .5s;
     font-size: 1.5rem;
 }
 
-.about.active{
+.aboutContent.active{
     transform: translateX(0);
 }
 
-.aboutPage img{
+.aboutPage .aboutImg{
     width: 80%;
-    transform: translateX(120%) translateY(-20%) scaleX(0.2);
+    transform: translateX(120%) translateY(10%) scaleX(0.2);
     transition: .5s;
 }
 
-.aboutPage img:nth-of-type(2){
-    position: absolute;
-    top:180%;
+.aboutPage .aboutImg:nth-of-type(2){
     transform: translateX(-120%) scaleX(0.2);
 }
-.aboutPage img:nth-of-type(2).active{
+.aboutPage .aboutImg:nth-of-type(2).active{
     transform: translateX(-10%) scaleX(1);
     animation: opacity 1s both;
 }
-.aboutPage img.active{
-    transform: translateX(10%) translateY(-20%) scaleX(1);
+.aboutPage .aboutImg.active{
+    transform: translateX(10%) translateY(10%) scaleX(1);
     animation: opacity2 1s both;
 }
 

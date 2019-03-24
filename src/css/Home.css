@@ -33,7 +33,7 @@ section{
     width: 100%;
 }
 
-img{
+.homeImg{
     width: 85%;
     height: 80%;
     object-fit: cover;

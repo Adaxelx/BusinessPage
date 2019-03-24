@@ -1,6 +1,9 @@
 import React from 'react';
 import '../css/About.css'
 
+import img from '../img/clouds.jpg'
+import img2 from '../img/hong-kong.jpg'
+
 let off;
 let height;
 let windowH = window.innerHeight;
@@ -11,35 +14,14 @@ class About extends React.Component {
             false,
             false,
             false,
+            false,
+            false,
         ],
      }
 
-    onScroll = () => {
-        let scrollV = window.scrollY;
-        this.refs.forEach(item=>{
-            off = item.current.offsetTop;
-             height = item.current.offsetHeight;
-            if(off<scrollV+windowH-height/2){
-                item.current.classList.add('active')
-            }
-            else{
-                item.classList.remove('active');
-            }
-        })
-    }
-
-    onLoad = ()=>{
-        this.scrollItems.forEach(item=>{
-        off = item.offsetTop;
-            if(off<windowH){
-                item.classList.add('active')
-            }
-        })
-    }
-
    handleScroll = () =>{
     let scrollV = window.scrollY;
-    const tabDivs = [this.div1,this.div2,this.div3]
+    const tabDivs = [this.div1,this.div2,this.img1,this.img2,this.div3]
 
     tabDivs.forEach((div,i) => {
         off = div.current.offsetTop
@@ -47,11 +29,9 @@ class About extends React.Component {
         const actives = this.state.active;
         if(off<scrollV+windowH-height/2){
             actives[i] = true;
-            console.log(actives)
            this.setState({
                 actives
            })
-           console.log(this.state.active)
         }
         else{
             actives[i]= false;
@@ -65,6 +45,8 @@ class About extends React.Component {
     div1 = React.createRef();
     div2 = React.createRef();
     div3 = React.createRef();
+    img1 = React.createRef();
+    img2 = React.createRef();
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -79,9 +61,13 @@ class About extends React.Component {
         
         return (  
         <section className='aboutPage'>
-         <div ref={this.div1} className={active[0]? 'about active' : 'about'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
-         <div ref={this.div2} className={active[1]? 'about active' : 'about'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
-         <div ref={this.div3} className={active[2]? 'about active' : 'about'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
+         <div ref={this.div1} className={active[0]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
+         <div ref={this.div2} className={active[1]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
+         <img src={img} ref={this.img1} className={active[2] ? 'aboutImg active' : 'aboutImg'}></img>
+         <img src={img2} ref={this.img2} className={active[3] ? 'aboutImg active' : 'aboutImg'}></img>
+         <div ref={this.div3} className={active[4]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
+         
+         
         </section>
         );
     }
