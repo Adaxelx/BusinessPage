@@ -15,13 +15,17 @@
 
 .aboutContent{
     width: 80%;
-    transform: translateX(-120%);
+    transform: translateX(-120%) translateY(100%);
     transition: .5s;
     font-size: 1.5rem;
 }
 
+.aboutContent:nth-of-type(odd){
+    transform: translateX(120%) translateY(100%);
+}
+
 .aboutContent.active{
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
 }
 
 .aboutPage .aboutImg{
