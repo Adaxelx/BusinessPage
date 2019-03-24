@@ -27,7 +27,7 @@ class About extends React.Component {
         off = div.current.offsetTop
         height = div.current.offsetHeight;
         const actives = this.state.active;
-        if(off<scrollV+windowH-height/2){
+        if(off<scrollV+windowH-height){
             actives[i] = true;
            this.setState({
                 actives

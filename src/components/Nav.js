@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Nav.css'
-
+import {NavLink} from 'react-router-dom';
 class Nav extends React.Component {
     state = { 
         active: false
@@ -26,10 +26,10 @@ class Nav extends React.Component {
       
         <nav className={active ? 'active' : ''}>
             <ul>
-                <li><span className={active ? 'number active' : 'number'}>02</span><span className={active ? 'txt active' : 'txt'}>Start</span></li>
-                <li><span className={active ? 'number active' : 'number'}>03</span><span className={active ? 'txt active' : 'txt'}>Oferta</span></li>
-                <li><span className={active ? 'number active' : 'number'}>04</span><span className={active ? 'txt active' : 'txt'}>Gdzie nas znajdziesz</span></li>
-                <li><span className={active ? 'number active' : 'number'}>05</span><span className={active ? 'txt active' : 'txt'}>Kontakt</span></li>
+                <NavLink to='/'><li><span className={active ? 'number active' : 'number'}>01</span><span className={active ? 'txt active' : 'txt'}>Start</span></li></NavLink>
+                <NavLink to='/offer'><li><span className={active ? 'number active' : 'number'}>02</span><span className={active ? 'txt active' : 'txt'}>Oferta</span></li></NavLink>
+                <NavLink to='/place'><li><span className={active ? 'number active' : 'number'}>03</span><span className={active ? 'txt active' : 'txt'}>Gdzie nas znajdziesz</span></li></NavLink>
+                <NavLink to='/contact'><li><span className={active ? 'number active' : 'number'}>04</span><span className={active ? 'txt active' : 'txt'}>Kontakt</span></li></NavLink>
             </ul>
         </nav>
         </>
