@@ -7,7 +7,7 @@ import About from './About.js'
 let lastScrollY,ticking;
 
 class Home extends React.Component {
-    handleScroll = () => {
+    handleScroll = (e) => {
         lastScrollY = window.scrollY;
         if (!ticking) {
           window.requestAnimationFrame(() => {
