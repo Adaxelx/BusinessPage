@@ -11,8 +11,16 @@ class Home extends React.Component {
         lastScrollY = window.scrollY;
         if (!ticking) {
           window.requestAnimationFrame(() => {
+            let top = 10 + lastScrollY/7
+            
+            if(top<100){
+                this.img.current.style.top = top+'%';
+            }
+            else{
+                this.img.current.style.top = 100 + '%';
+            }
+           
             this.img.current.style.transform = `scale(${1 - lastScrollY/400}) `
-            this.img.current.style.top = `${10 + lastScrollY/7}%`
             this.img.current.style.opacity = `${1 - lastScrollY/250}`;
             this.logo.current.style.opacity = `${1 - lastScrollY/250}`
             ticking = false;
