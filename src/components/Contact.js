@@ -36,6 +36,7 @@ class Contact extends React.Component {
                         <p>Wiadomość</p>
                         <textarea id="message" name="message" value={this.state.message} onChange={this.handleChange}></textarea>
                     </label>
+                    <button>Send</button>
                 </form>
             </section>
          );
