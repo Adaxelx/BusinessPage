@@ -4,7 +4,7 @@ class Offer extends React.Component {
     state = {  }
     render() { 
         return ( 
-            <section>xd</section>
+            <section></section>
          );
     }
 }
