@@ -1,6 +1,9 @@
 import React from 'react';
 import '../css/Nav.css'
 import {NavLink} from 'react-router-dom';
+
+let prevScrollpos = window.pageYOffset;
+
 class Nav extends React.Component {
     state = { 
         active: false,
@@ -23,7 +26,29 @@ class Nav extends React.Component {
             this.setState({
                 activeNav: !this.state.activeNav,
             })
+            this.nav.current.style.transform = `rotate(0deg)`
+            this.nav.current.style.left = "5vh"
         }
+
+     }
+
+     handleScroll = () => {
+        let currentScrollPos = window.pageYOffset;
+        if(prevScrollpos < currentScrollPos){
+            this.nav.current.style.transform = `rotate(-90deg)`
+            this.nav.current.style.left = "0"
+        }
+        else{
+            this.nav.current.style.transform = `rotate(0deg)`
+            this.nav.current.style.left = "5vh"
+        }
+        prevScrollpos = currentScrollPos;
+     }
+
+     nav = React.createRef();
+
+     componentDidMount(){
+         window.addEventListener('scroll',this.handleScroll)
      }
      
     render() { 
@@ -32,7 +57,7 @@ class Nav extends React.Component {
 
         return (
         <>
-        <button className='navBtn' onClick={this.handleClick}>
+        <button ref={this.nav} className='navBtn' onClick={this.handleClick}>
             <span className={activeNav ? 'top bar active' : 'top bar'}></span>
             <span className={activeNav ? 'mid bar active' : 'mid bar'}></span>
             <span className={activeNav ? 'bot bar active' : 'bot bar'}></span>
