@@ -26,7 +26,7 @@ html{
     height: 2rem;
     z-index: 2;
     transition: .5s;
-    transform-origin: bottom left;
+    /* transform-origin: bottom left; */
     /* props for bars */
 
     display: flex;
