@@ -28,7 +28,7 @@ class Nav extends React.Component {
              flag: false,
              active: !this.state.active,
          })
-         setTimeout(this.changeFlag,1500)
+         setTimeout(this.changeFlag,1000)
          if(this.state.activeNav){
             setTimeout(this.changeStateNav, 1000)
         }else{

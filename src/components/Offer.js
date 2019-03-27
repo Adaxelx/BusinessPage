@@ -7,7 +7,7 @@ class Offer extends React.Component {
     render() { 
         return ( 
             <section className='offer'>
-                <p className='shinyTxt'>Oferta</p>
+                <p className='title' data-text="Oferta">Oferta</p>
             </section>
          );
     }

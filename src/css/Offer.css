@@ -7,3 +7,84 @@
     align-items: center;
     justify-content: space-around;
 }
+.offer .title{
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 3rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: black;
+    overflow: hidden;
+}
+.offer .title::before,
+.offer .title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.offer .title::before{
+    left: 2px;
+    text-shadow: -1px 0 red;
+    background-color: white;
+    clip: rect(10vh, 100vw, 9vh, 0);
+    animation: glitch-anim 2s linear both infinite alternate-reverse;
+    z-index: 1;
+}
+
+.offer .title::after{
+    left: -2px;
+    text-shadow: -1px 0 blue;
+    background-color: white;
+    clip: rect(10vh, 100vw, 9vh, 0);
+    animation: glitch-anim 2s linear infinite  alternate;
+    z-index: 1;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10vh, 100vw, 12vh, 0);
+    }
+    20% {
+        clip: rect(12vh, 100vw, 15vh, 0);
+    }
+    40% {
+        clip: rect(11vh, 100vw, 11vh, 0);
+    }
+    60% {
+        clip: rect(4vh, 100vw, 5vh, 0);
+    }
+    80% {
+        clip: rect(6vh, 100vw, 10vh, 0);
+    }
+    100% {
+        clip: rect(14vh, 100vw, 6vh, 0);
+    }
+}
+
+  @keyframes glitch-anim2{
+    0% {
+        clip: rect(11vh, 50vw, 13vh, 0);
+    }
+    20% {
+        clip: rect(13vh, 50vw, 15vh, 0);
+    }
+    40% {
+        clip: rect(12vh, 50vw, 13vh, 0);
+    }
+    60% {
+        clip: rect(5vh, 50vw, 7vh, 0);
+    }
+    80% {
+        clip: rect(7vh, 50vw, 9vh, 0);
+    }
+    100% {
+        clip: rect(15vh, 50vw, 17vh, 0);
+    }
+  }
