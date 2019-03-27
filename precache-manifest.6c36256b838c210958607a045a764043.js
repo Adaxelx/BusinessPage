@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/react-git-first-project/static/js/runtime~main.5b1503ad.js"
   },
   {
-    "revision": "a5dfa550a1714b8bb9e1",
-    "url": "/react-git-first-project/static/js/main.4ea2f076.chunk.js"
+    "revision": "5cdd554e6fecda0e7d72",
+    "url": "/react-git-first-project/static/js/main.e3ee4491.chunk.js"
   },
   {
     "revision": "9026dd6dfda8f5724dab",
     "url": "/react-git-first-project/static/js/2.e7cd2972.chunk.js"
   },
   {
-    "revision": "a5dfa550a1714b8bb9e1",
-    "url": "/react-git-first-project/static/css/main.a99abb9b.chunk.css"
+    "revision": "5cdd554e6fecda0e7d72",
+    "url": "/react-git-first-project/static/css/main.8f8e4ba7.chunk.css"
   },
   {
-    "revision": "ad1040ecf03c38830223b988327e5c3a",
+    "revision": "5ebeeccf6ce8ffc5981bcf97c717dea4",
     "url": "/react-git-first-project/index.html"
   }
 ];
