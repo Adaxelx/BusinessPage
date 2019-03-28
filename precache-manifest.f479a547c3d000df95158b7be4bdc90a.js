@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-git-first-project/static/media/clouds.bfcbf6e3.jpg"
   },
   {
-    "revision": "1371637b8019d8d70b49",
-    "url": "/react-git-first-project/static/css/main.bb3edd7d.chunk.css"
+    "revision": "de8e0f5d8e9887e74cb5",
+    "url": "/react-git-first-project/static/css/main.e4ce6850.chunk.css"
   },
   {
     "revision": "430fc2b51c872a60e9c9",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/react-git-first-project/static/media/img.53016398.jpg"
   },
   {
-    "revision": "1371637b8019d8d70b49",
-    "url": "/react-git-first-project/static/js/main.8bbe6685.chunk.js"
+    "revision": "de8e0f5d8e9887e74cb5",
+    "url": "/react-git-first-project/static/js/main.01faabaa.chunk.js"
   },
   {
     "revision": "be43563195ed65d7d4e7cce3fd9d89d3",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/react-git-first-project/static/media/users.1637a43d.jpg"
   },
   {
-    "revision": "35b335daf62b4e4cff27ef21fe791aca",
+    "revision": "8791352602d40689cfd05c5868ea3df1",
     "url": "/react-git-first-project/index.html"
   }
 ];
