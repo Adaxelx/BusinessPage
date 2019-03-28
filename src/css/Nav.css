@@ -24,7 +24,7 @@ html{
     left: 5vh;
     width: 4rem;
     height: 2rem;
-    z-index: 2;
+    z-index: 3;
     transition: .5s;
     /* transform-origin: bottom left; */
     /* props for bars */
@@ -87,7 +87,7 @@ nav{
     height: 100vh;
     transition: .5s;
     background-color: black;
-    z-index: 1;
+    z-index: 2;
 
     /* dla ul*/
 

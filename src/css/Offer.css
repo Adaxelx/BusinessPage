@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-around;
 }
+
+/* title with glitch efect */ 
+
 .offer .title{
     position: relative;
     width: 100%;
@@ -88,3 +91,37 @@
         clip: rect(15vh, 50vw, 17vh, 0);
     }
   }
+
+
+/* articles */ 
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+article .icon{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: rgba(255,255,255,0.3);
+    background-image: url('../img/users.jpg');
+    -webkit-background-clip: text;
+    animation: move 30s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes move{
+    100%{
+        background-position: left 800px; 
+    }
+}
+
+article .titleArt{
+    font-size: 2.5rem;
+}
+
+article .content{
+    width: 100%;
+}
+
