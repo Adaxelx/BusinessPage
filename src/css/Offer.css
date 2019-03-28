@@ -99,6 +99,14 @@ article{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
+    transform: translateY(100%);
+    opacity:0;
+    transition: .5s;
+}
+
+article.active{
+    opacity:1;
+    transform: translateY(0);
 }
 
 article .icon{
