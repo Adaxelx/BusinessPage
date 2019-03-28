@@ -7,12 +7,13 @@ import Nav from './components/Nav.js'
 import Home from './components/Home.js'
 import Offer from './components/Offer.js'
 import Contact from './components/Contact.js'
-
+import Loading from './components/Loading.js'
 class App extends Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
+      <Loading/>
        <Nav/>
        <Switch>
          <Route path="/" exact component={Home}/>
