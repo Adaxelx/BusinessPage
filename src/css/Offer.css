@@ -1,6 +1,6 @@
 .offer {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
 
     display: flex;
     flex-direction: column;
@@ -125,3 +125,21 @@ article .content{
     width: 100%;
 }
 
+/* img */ 
+
+.img{
+    height: 50vh;
+    width: 80%;
+    overflow: hidden;
+    
+}
+
+.img img{
+    height: 100%;
+    transform: scale(2);
+    transition: 1s;
+}
+
+.img img.active{
+    transform: scale(1);
+}
