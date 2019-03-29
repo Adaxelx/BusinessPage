@@ -8,6 +8,8 @@ import Home from './components/Home.js'
 import Offer from './components/Offer.js'
 import Contact from './components/Contact.js'
 import Loading from './components/Loading.js'
+import Place from './components/Place.js'
+
 class App extends Component {
   render() {
     return (
@@ -18,6 +20,7 @@ class App extends Component {
        <Switch>
          <Route path="/" exact component={Home}/>
          <Route path="/offer" exact component={Offer}/>
+         <Route path="/place" exact component={Place}/>
          <Route path="/contact" exact component={Contact}/>
        </Switch>
       </div>
