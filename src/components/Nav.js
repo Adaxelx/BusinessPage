@@ -43,7 +43,7 @@ class Nav extends React.Component {
 
      handleScroll = () => {
         let currentScrollPos = window.pageYOffset;
-        if(prevScrollpos < currentScrollPos){
+        if(prevScrollpos < currentScrollPos && currentScrollPos>50){
             this.nav.current.style.transform = `rotate(-90deg)`
             this.nav.current.style.left = "0vh"
         }

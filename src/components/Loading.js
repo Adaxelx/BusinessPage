@@ -9,8 +9,8 @@ class Loading extends React.Component {
             <>
            
             <div className='loading'>
-            <div class="loadingTxt">
-                <p class='shinyTxt'>Mostowski</p>
+            <div className="loadingTxt">
+                <p className='shinyTxt'>Mostowski</p>
             </div>
             <div className="wrapLoad">
             <div></div>
