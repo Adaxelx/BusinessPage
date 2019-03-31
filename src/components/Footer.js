@@ -12,16 +12,17 @@ const Footer = () => {
                 <p>Instagram</p> 
             </div>
             <div className="contactFot">
+                <p className='header'>Skontaktuj się z nami!</p>
                 <p>exapsaka@o2.pl</p> 
                 <p>530 439 439</p>
                 <p>Lub napisz wiadomość tutaj!</p>
             </div>
             <div className="partnership">
-                <p>Jeżeli zastanawiasz się nad pracą u nas napisz tutaj:</p>
+                <p className='header'>Dołącz do nas!</p>
                 <p>work.saodjk@o2.pl</p>
             </div>
-            <div className="place">
-                <p>Znajdziesz nas pod adresem:</p>
+            <div className="placeFot">
+                <p className='header'>Znajdziesz nas pod adresem:</p>
                 <p>aosdk sapodasd 23, alskd laskda</p>
             </div>
         </footer>

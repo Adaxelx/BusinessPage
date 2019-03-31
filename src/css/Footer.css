@@ -1,4 +1,28 @@
 footer{
-    height: 50vh;
+    height: 70vh;
     width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div{
+    height: 10vh;
+    width: 80%;
+    font-size: 1.3rem;
+}
+
+footer .title{
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    color: white;
+}
+
+footer .header{
+    font-size: 1.6rem;
+    color: lightgray;
 }
