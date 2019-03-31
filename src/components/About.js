@@ -27,7 +27,7 @@ class About extends React.Component {
         off = div.current.offsetTop
         height = div.current.offsetHeight;
         const actives = this.state.active;
-        if(off<scrollV+windowH-height){
+        if(off<scrollV+windowH-height/2){
             actives[i] = true;
            this.setState({
                 actives
@@ -63,8 +63,8 @@ class About extends React.Component {
         <section className='aboutPage'>
          <div ref={this.div1} className={active[0]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
          <div ref={this.div2} className={active[1]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
-         <img src={img} ref={this.img1} className={active[2] ? 'aboutImg active' : 'aboutImg'}></img>
-         <img src={img2} ref={this.img2} className={active[3] ? 'aboutImg active' : 'aboutImg'}></img>
+         <img src={img} ref={this.img1} alt="" className={active[2] ? 'aboutImg active' : 'aboutImg'}></img>
+         <img src={img2} ref={this.img2} alt="" className={active[3] ? 'aboutImg active' : 'aboutImg'}></img>
          <div ref={this.div3} className={active[4]? 'aboutContent active' : 'aboutContent'}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </div>
          
          

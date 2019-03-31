@@ -15,6 +15,8 @@ class Home extends React.Component {
             
             if(top<100){
                 this.img.current.style.top = top+'%';
+                this.img.current.style.opacity = 0;
+                this.img.current.style.transform = `scale(0)`
             }
             else{
                 this.img.current.style.top = 100 + '%';
