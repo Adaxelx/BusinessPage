@@ -1,0 +1,21 @@
+.place{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.place iframe{
+    margin-top: 5vh;
+    width: 80%;
+    height: 80vh;
+    border-radius: 20%;
+}
+
+.place .adress{
+    margin-top: 4vh;
+    font-size: 1.5rem;
+}
