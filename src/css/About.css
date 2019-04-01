@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html,body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 .aboutPage{
     height: 150vh;
     display: flex;
@@ -11,6 +17,7 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+
 }
 
 .aboutContent{
@@ -29,6 +36,7 @@
 }
 
 .aboutPage .aboutImg{
+    position: relative;
     width: 80%;
     transform: translateX(120%) translateY(10%) scaleX(0.2);
     transition: .5s;

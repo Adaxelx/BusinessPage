@@ -39,7 +39,7 @@ class Footer extends React.Component{
           }
     render(){
         return ( 
-            <>
+    
             <footer ref={this.footer} className={this.state.active ? 'active' : ''}>
                 <p className="title">Więcej o nas!</p>
                 <div className="socials">
@@ -61,7 +61,7 @@ class Footer extends React.Component{
                     <p>aosdk sapodasd 23, alskd laskda</p>
                 </div>
             </footer>
-            </>
+        
             
          );
     }
