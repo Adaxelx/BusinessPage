@@ -27,22 +27,22 @@
     font-size: 1.5rem;
     font-weight: bolder;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .place .adress span{
     display: block;
-    transform-origin: bottom left;
-    transform: rotate(90deg);
+    transform-origin: top left;
+    transform: rotate(90deg) translateX(-80%);
     margin-right: 5px;
     transition: .5s .5s;
 }
 
 .place .adress span:nth-of-type(2){
-    transform-origin: bottom right;
-    transform: rotate(-90deg);
+    transform-origin: top right;
+    transform: rotate(-90deg) translateX(80%);
 }
 
 .place .adress.active span{
-    transform: rotate(0);
+    transform: rotate(0) translateX(0%) translateY(0%);
 }
