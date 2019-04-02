@@ -13,26 +13,36 @@
     width: 80%;
     height: 80vh;
     border-radius: 20%;
+    transform: scaleY(0);
+    transition: .5s;
+    transform-origin: top;
+}
+
+.place iframe.active{
+    transform: scaleX(1);
 }
 
 .place .adress{
     margin-top: 4vh;
     font-size: 1.5rem;
+    font-weight: bolder;
     display: flex;
     overflow: hidden;
 }
 
 .place .adress span{
     display: block;
-    transform: translateY(-100%);
+    transform-origin: bottom left;
+    transform: rotate(90deg);
     margin-right: 5px;
-    transition: .5s;
+    transition: .5s .5s;
 }
 
-.place .adress span:nth-of-type(odd){
-    transform: translateY(100%);
+.place .adress span:nth-of-type(2){
+    transform-origin: bottom right;
+    transform: rotate(-90deg);
 }
 
 .place .adress.active span{
-    transform: translate(0);
+    transform: rotate(0);
 }
