@@ -26,6 +26,9 @@ section{
     position: relative;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 .logo{
     color: white;
