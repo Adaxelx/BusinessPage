@@ -3,7 +3,19 @@ import React from 'react';
 import '../css/Place.css'
 
 class Place extends React.Component {
-    state = {  }
+    state = { 
+        active: false,
+     }
+
+     addClass = () =>{
+         this.setState({
+             active: true,
+         })
+     }
+
+     componentDidMount(){
+         setTimeout(this.addClass,2000)
+     }
     render() { 
         return ( 
             <section className="place">
@@ -13,7 +25,7 @@ class Place extends React.Component {
                     frameborder: 0,
                 }} title="google"
                 allowFullScreen></iframe>
-                <p className="adress">Orzechowa 23B Biała Podlaska 21-500</p>
+                <p className={this.state.active ? 'active adress' : 'adress'}><span>Orzechowa 23B</span> <span> Biała Podlaska</span> <span>21-500</span></p>
             </section>
          );
     }

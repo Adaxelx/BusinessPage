@@ -18,4 +18,21 @@
 .place .adress{
     margin-top: 4vh;
     font-size: 1.5rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.place .adress span{
+    display: block;
+    transform: translateY(-100%);
+    margin-right: 5px;
+    transition: .5s;
+}
+
+.place .adress span:nth-of-type(odd){
+    transform: translateY(100%);
+}
+
+.place .adress.active span{
+    transform: translate(0);
 }
