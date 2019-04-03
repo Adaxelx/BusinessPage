@@ -2,6 +2,9 @@ import React from 'react';
 
 import '../css/Place.css'
 
+let height,off;
+let windowH = window.innerHeight;
+
 class Place extends React.Component {
     state = { 
         active: false,
@@ -13,9 +16,32 @@ class Place extends React.Component {
          })
      }
 
+     handleScroll = () =>{
+        const {p} = this;
+        let scrollV = window.scrollY;
+        off = p.current.offsetTop;
+        height = p.current.offsetHeight;
+        if(off<scrollV+windowH-height/2){
+               this.setState({
+                    active: true,
+               })
+            }
+            // else{
+            //     actives[i]= false;
+            //     this.setState({
+            //         actives
+            //     })
+            // }
+        }
+     p = React.createRef();
+
      componentDidMount(){
-         setTimeout(this.addClass,2000)
+        setTimeout(this.handleScroll,2000)
+         window.addEventListener('scroll',this.handleScroll)
      }
+    componentWillUnmount(){
+        window.removeEventListener('scroll',this.handleScroll)
+    }
     render() { 
 
         const {active} = this.state
@@ -29,7 +55,7 @@ class Place extends React.Component {
                     frameborder: 0,
                 }} title="google"
                 allowFullScreen></iframe>
-                <p className={active ? 'active adress' : 'adress'}><span>Orzechowa 23B  Biała</span> <span>Podlaska 21-500</span></p>
+                <p ref={this.p} className={active ? 'active adress' : 'adress'}><span>Orzechowa 23B  Biała</span> <span>Podlaska 21-500</span></p>
             </section>
          );
     }
