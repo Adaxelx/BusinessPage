@@ -75,3 +75,25 @@ html,body{
         border-radius: 0;
     }
 }
+
+
+/* media */
+
+@media (orientation: landscape){
+    .aboutPage{
+        height: 250vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+    
+    }
+    .aboutPage .aboutImg{
+        position: relative;
+        width: 70%;
+        transform: translateX(120%) translateY(10%) scaleX(0.2);
+        transition: .5s;
+        height: 60vh;
+    }
+}

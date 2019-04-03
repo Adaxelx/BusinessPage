@@ -50,3 +50,11 @@ section{
     transform-style: preserve-3d;
 }
 
+/* media */
+
+@media (orientation: landscape){
+    .homeImg{
+        width: 80%;
+        left: 10%;
+    }
+}
