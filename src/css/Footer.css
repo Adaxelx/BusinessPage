@@ -10,7 +10,6 @@ footer{
 }
 
 footer div{
-    height: 10vh;
     width: 80%;
     font-size: 1.3rem;
 }
@@ -41,4 +40,21 @@ footer p{
 footer.active p{
     transform: translateY(0);
     opacity: 1;
+}
+
+
+/* media */
+
+@media (orientation: landscape){
+    footer{
+        height: 100vh;
+    }
+    footer div{
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    footer .header{
+        font-size: 2rem;
+        color: gray;
+    }
 }

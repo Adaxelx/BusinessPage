@@ -66,3 +66,22 @@ input{
     color: white;
     font-size: 1.5rem;
 }
+
+/* media */
+
+@media (orientation: landscape){
+
+    .contact{
+        height: 200vh;
+    }
+    .contactForm{
+       height: 120vh;
+    }
+    input{
+        height: 10vh;
+    }
+    .contactForm textarea{
+        height: 50vh;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+}
