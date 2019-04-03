@@ -73,13 +73,15 @@ class Offer extends React.Component {
                 <article ref={this.articleRef} className={this.state.active[0] ? 'active' : ''}>
                     <i className="fas fa-users icon"></i>
                     <p className="titleArt">Lorem ipsum</p>
-                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!</p>
+                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </p>
                 </article>
               
                 <article ref={this.articleRef2} className={this.state.active[1] ? 'active' : ''}>
                     <i className="fas fa-users icon"></i>
                     <p className="titleArt">Lorem ipsum</p>
-                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!</p>
+                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </p>
                 </article>
                 <div className="img">
                     <img ref={this.imgRef} src={img2} className={this.state.active[2] ? 'active' : ''} alt=""/>
@@ -87,7 +89,8 @@ class Offer extends React.Component {
                 <article ref={this.articleRef3} className={this.state.active[3] ? 'active' : ''}>
                     <i className="fas fa-users icon"></i>
                     <p className="titleArt">Lorem ipsum</p>
-                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!</p>
+                    <p className="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam alias maxime illum omnis praesentium cum delectus laboriosam. Repellendus non officia quaerat rerum culpa debitis, dolorem sed perferendis officiis corrupti minus!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perspiciatis, provident at quod mollitia accusamus eligendi, quia facere, accusantium blanditiis. Atque, in praesentium! Veniam facere ipsam facilis harum aliquid? </p>
                 </article>
                 <div className="img">
                     <img ref={this.imgRef2} className={this.state.active[4] ? 'active' : ''} src={img} alt=""/>

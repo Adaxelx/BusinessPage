@@ -1,6 +1,6 @@
 .offer {
     width: 100%;
-    height: 200vh;
+    height: 250vh;
 
     display: flex;
     flex-direction: column;
@@ -139,7 +139,9 @@ article .content{
     height: 50vh;
     width: 80%;
     overflow: hidden;
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .img img{
@@ -150,4 +152,25 @@ article .content{
 
 .img img.active{
     transform: scale(1);
+}
+
+/* media */
+
+@media (orientation: landscape){
+    .offer {
+        width: 100%;
+        height: 380vh;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .img{
+        height: 90vh;
+        width: 80%;
+        overflow: hidden;
+        
+    }
 }
