@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/Place.css'
+import '../css/style.sass'
 
 let height,off;
 let windowH = window.innerHeight;
