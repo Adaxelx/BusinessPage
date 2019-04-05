@@ -1,0 +1,79 @@
+.loading
+    height: 100vh
+    width: 100%
+    background-color: lightgray
+    position: fixed
+    animation: hide 2s both
+    z-index: 4
+    & .wrapLoad
+        position: absolute
+        top: 55%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 15vh
+        display: flex
+        justify-content: space-between
+        align-content: center
+        & div
+            height: 0
+            width: 1vh
+            background-color: black
+            animation: loadingA .8s infinite both
+            border-radius: 20%
+            transform: translate(-50%,-50%)
+            &:nth-of-type(2)
+                animation-delay: .1s
+            &:nth-of-type(3)
+                animation-delay: .2s
+            &:nth-of-type(4)
+                animation-delay: .3s
+            &:nth-of-type(5)
+                animation-delay: .4s
+            &:nth-of-type(6)
+                animation-delay: .5s
+            &:nth-of-type(7)
+                animation-delay: .6s
+            &:nth-of-type(8)
+                animation-delay: .7s
+div.loadingTxt
+    height: 20vh
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0
+.shinyTxt
+    color: black
+    font-size: 3rem
+    text-transform: uppercase
+    background-image: linear-gradient(90deg,lightgray,black,lightgray)
+    background-size: 60%
+    background-repeat: no-repeat
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    animation: shine 2s infinite
+
+
++keyframes(hide)
+    0%
+        transform: translateY(0)
+    70%
+        transform:  translateY(0)
+    100%
+        transform: translateY(-100%)
+
++keyframes(loadingA)
+    0%
+        height: 0
+    50%
+        height: 10vh
+    100%
+        height: 0
++keyframes(shine)
+    0%
+        background-position: -200%
+    100%
+        background-position: 300%
+    
+

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/Loading.css'
+import '../css/style.sass'
 
 class Loading extends React.Component {
     state = {  }
