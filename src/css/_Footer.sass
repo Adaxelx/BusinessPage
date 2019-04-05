@@ -1,0 +1,28 @@
+footer
+    border-top: 1px solid black
+    height: 70vh
+    width: 100%
+    background-color: transparent
+    +flex(space-around)
+    & div
+        width: 80%
+        font-size: 1.3rem
+    & .title
+        font-weight: bold
+        text-transform: uppercase
+        -webkit-text-stroke: 1px black
+        color: transparent
+        color: white
+        transform: translateY(0)
+        opacity: 1
+    & .header
+        font-size: 1.8rem
+        color: gray
+    & p
+        transform: translateY(-200%)
+        opacity: 0
+        transition: 1.5s
+    &.active p
+        transform: translateY(0)
+        opacity: 1
+
