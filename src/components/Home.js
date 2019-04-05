@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../img/img.jpg'
-import '../css/Home.css'
+import '../css/style.sass'
 
 import About from './About.js'
 
