@@ -1,0 +1,51 @@
+html,body
+    font-family: sans-serif
+    overflow-x: hidden
+    max-width: 100vw
+.aboutPage
+    height: 150vh
+    overflow: hidden
+    +flex()
+    justify-content: space-around
+    .aboutImg
+        position: relative
+        width: 80%
+        transform: translateX(120%) translateY(10%) scaleX(0.2)
+        transition: .5s
+        &.active
+            transform: translateX(10%) translateY(10%) scaleX(1)
+            animation: opacity2 1s both
+        &:nth-of-type(2)
+            transform: translateX(-120%) scaleX(0.2)
+            &.active   
+                transform: translateX(-10%) scaleX(1)
+                animation: opacity 1s both
+
+
+
+.aboutContent
+    width: 80%
+    transform: translateX(-120%) translateY(100%)
+    transition: .5s
+    font-size: $font-size
+    &:nth-of-type(odd)
+        transform: translateX(120%) translateY(100%)
+    &.active
+        transform: translateX(0) translateY(0)
+
+
++keyframes(opacity)
+  0%
+    opacity: 0.2
+    border-radius: 0 60% 60% 0
+  100%
+    opacity: 1
+    border-radius: 0
+
++keyframes(opacity2)
+  0%
+    opacity: 0.2
+    border-radius: 60% 0% 0% 60%
+  100%
+    opacity: 1
+    border-radius: 0
