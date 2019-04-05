@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Nav.css'
+import '../css/style.sass'
+// import '../css/Nav.css'
 import {NavLink} from 'react-router-dom';
 
 let prevScrollpos = window.pageYOffset;
