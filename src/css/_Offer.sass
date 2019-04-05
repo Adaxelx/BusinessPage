@@ -1,0 +1,100 @@
+.offer 
+    width: 100%
+    height: 250vh
+    +flex(space-around)
+    & .title
+        position: relative
+        width: 100%
+        height: 20vh
+        text-align: center
+        line-height: 20vh
+        font-size: 3rem
+        font-family: sans-serif
+        text-transform: uppercase
+        color: black
+        overflow: hidden
+        &::before, &::after 
+            content: attr(data-text)
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+        &::before
+            left: 2px
+            text-shadow: -1px 0 red
+            background-color: white
+            clip: rect(10vh, 100vw, 9vh, 0)
+            animation: glitch-anim 2s linear both infinite alternate-reverse
+            z-index: 1
+        &::after
+            left: -2px
+            text-shadow: -1px 0 blue
+            background-color: white
+            clip: rect(10vh, 100vw, 9vh, 0)
+            animation: glitch-anim 2s linear infinite  alternate
+            z-index: 1
+    & article
+        display: flex
+        flex-wrap: wrap
+        width: 80%
+        transform: translateY(100%)
+        opacity: 0
+        transition: .5s
+        &.active
+            opacity: 1
+            transform: translateY(0)
+        & .icon
+            text-transform: uppercase
+            font-size: 3.5rem
+            color: rgba(255,255,255,0.3)
+            background-image: url('../img/users.jpg')
+            -webkit-background-clip: text
+            animation: move 30s linear infinite
+            font-weight: bold
+        & .titleArt
+            font-size: 2.5rem
+        & .content
+            width: 100%
+    & .img
+        height: 50vh
+        width: 80%
+        overflow: hidden
+        +flex(flex-start)
+        & img
+            height: 100%
+            transform: scale(2)
+            transition: 1s
+            &.active
+                transform: scale(1)
+
+
+
+
+
+
+
+
++keyframes(glitch-anim)
+    0% 
+        clip: rect(10vh, 100vw, 12vh, 0)
+    
+    20% 
+        clip: rect(12vh, 100vw, 15vh, 0)
+    
+    40% 
+        clip: rect(11vh, 100vw, 11vh, 0)
+    
+    60% 
+        clip: rect(4vh, 100vw, 5vh, 0)
+    
+    80% 
+        clip: rect(6vh, 100vw, 10vh, 0)
+    
+    100% 
+        clip: rect(14vh, 100vw, 6vh, 0)
+
++keyframes(move)
+    100%
+        background-position: left 800px
+    

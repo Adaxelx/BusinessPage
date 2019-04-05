@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/Offer.css'
+import '../css/style.sass'
 import img from '../img/tower.jpg'
 import img2 from '../img/buildings.jpg'
 
