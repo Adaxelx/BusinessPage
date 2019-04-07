@@ -86,6 +86,15 @@ html
 @media (orientation: landscape) and (min-width: 1024px)
     html
         font-size: 22px
+
+    /* about */
+
+    .aboutContent
+        width: 40%
+        &:nth-of-type(odd).active
+            transform: translateX(60%) translateY(0)  
+        &:nth-of-type(even).active
+            transform: translateX(-60%) translateY(0)  
     
     /* footer */
     
@@ -99,6 +108,14 @@ html
         & .placeFot
             transform: translateX(30%)
 
-@media (orientation: landscape) and (min-width: 1024px)
+@media (orientation: landscape) and (min-width: 1280px)
     html
         font-size: 22px
+    
+    /* home */ 
+    
+    .homeImg
+        width: 90%
+        height: 90%
+        left: 5%
+        top: 5%
