@@ -49,6 +49,7 @@ class About extends React.Component {
     img2 = React.createRef();
 
     componentDidMount() {
+        window.scrollTo(0,0);
         window.addEventListener('scroll', this.handleScroll);
     }
     componentWillUnmount() {

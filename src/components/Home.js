@@ -11,7 +11,7 @@ class Home extends React.Component {
         lastScrollY = window.scrollY;
         if (!ticking) {
           window.requestAnimationFrame(() => {
-            let top = 5 + lastScrollY/7
+            let top = 10 + lastScrollY/7
             
             if(top<100){
                 this.img.current.style.top = top+'%';
@@ -36,6 +36,7 @@ class Home extends React.Component {
     logo = React.createRef();
 
     componentDidMount() {
+        window.scrollTo(0,0);
         window.addEventListener('scroll', this.handleScroll);
     }
     componentWillUnmount() {

@@ -58,6 +58,7 @@ class Offer extends React.Component {
         }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.onLoad();
         setTimeout(this.handleScroll,1700);
         window.addEventListener('scroll', this.handleScroll);

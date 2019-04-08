@@ -36,6 +36,7 @@ class Place extends React.Component {
      p = React.createRef();
 
      componentDidMount(){
+        window.scrollTo(0,0);
         setTimeout(this.handleScroll,2000)
          window.addEventListener('scroll',this.handleScroll)
      }
