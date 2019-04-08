@@ -17,6 +17,34 @@ class Contact extends React.Component {
         })
      }
 
+    // moveText = (e)=>{
+    //     const divs = [this.div1,this.div2]
+    //     const scrollValue = window.scrollY;
+    //     const containerH = this.container.current.offsetHeight;
+    //     const containerOff = container.offsetTop
+    //     divs.forEach(div => {
+    //         const value = containerH + containerOff-textH-30;
+    //         if(containerOff<scrollValue && value>scrollValue){
+    //             text.style.position = 'fixed';
+    //             text.style.width = 50 + '%';
+    //             text.style.top = 20 +'px';
+    //         }else if(value<=scrollValue){
+    //             text.style.position = 'absolute';
+    //             text.style.top = containerH - textH -20 + 'px';
+    //             text.style.width = 100 + '%'
+    //         }
+    //         else{
+    //             text.style.position = 'absolute';
+    //             text.style.top = 20 + 'px';
+    //             text.style.width = 100 + '%'
+    //         }
+    //     })
+       
+    // }
+
+    div1 = React.createRef();
+    div2 = React.createRef();
+    container = React.createRef();
      componentDidMount(){
         window.scrollTo(0,0);
      }
