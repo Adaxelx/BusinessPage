@@ -1,0 +1,25 @@
+.offerComputer
+    +titleOffer()
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    & .articles
+        width: 30%
+        margin-right: 3vh
+        +flex(space-between)
+        & article
+            height: 120vh
+            & .titleArt 
+                font-size: 2.5rem
+            & .content
+                width: 100%
+                margin: 0
+    & .images
+        height: 250vh
+        width: 60%
+        +flex(space-between)
+        & .img
+            height: 120vh
+            +flex(space-around)
+            & img
+                width: 100%
