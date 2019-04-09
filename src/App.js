@@ -10,8 +10,12 @@ import Contact from './components/Contact.js'
 import Loading from './components/Loading.js'
 import Place from './components/Place.js'
 import Footer from './components/Footer.js'
+import OfferComputer from './components/OfferComputer.js'
+const windowWidth = 1280
+
 class App extends Component {
   render() {
+    const conditionOff = window.innerWidth > windowWidth ? OfferComputer : Offer
     return (
       <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
@@ -20,7 +24,7 @@ class App extends Component {
       
        <Switch>
          <Route path="/" exact component={Home}/>
-         <Route path="/offer" exact component={Offer}/>
+         <Route path="/offer" exact component={conditionOff}/>
          <Route path="/place" exact component={Place}/>
          <Route path="/contact" exact component={Contact}/>
        </Switch>
