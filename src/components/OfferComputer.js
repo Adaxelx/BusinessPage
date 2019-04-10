@@ -21,23 +21,24 @@ class OfferComputer extends React.Component {
         const scrollValue = window.scrollY;
         this.texts.forEach((txt,i) => {
             const value = conHeights[i] + conOffs[i] - txtHeights[i]-30;
-
+            // console.log(value)
+            console.log(conHeights[i],conOffs[i],value,scrollValue)
             if(conOffs[i]<scrollValue && value>scrollValue){
                 txt.current.style.position = 'fixed';
-                txt.current.style.width = 50 + '%';
+                txt.current.style.width = 30 + '%';
                 txt.current.style.top = 20 +'px';
-            
+                // console.log(1)
             }else if(value<=scrollValue){
                 txt.current.style.position = 'absolute';
                 txt.current.style.top = conHeights[i] - txtHeights[i] -20 + 'px';
                 txt.current.style.width = 100 + '%'
-         
+                // console.log(2)
             }
             else{
                 txt.current.style.position = 'absolute';
                 txt.current.style.top = 20 + 'px';
                 txt.current.style.width = 100 + '%'
-               
+                // console.log(3)
             }
         })
     }
