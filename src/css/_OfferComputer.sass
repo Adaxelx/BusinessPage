@@ -3,6 +3,7 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
+    height: 280vh
     & .articles
         width: 30%
         margin-right: 3vh
@@ -15,11 +16,15 @@
                 width: 100%
                 margin: 0
     & .images
-        height: 250vh
+        height: 260vh
         width: 60%
         +flex(space-between)
+        overflow: hidden
         & .img
             height: 120vh
-            +flex(space-around)
+            +flex(flex-start)
             & img
                 width: 100%
+                transform: translateX(-2%)
+                &:nth-of-type(2)
+                    transform: translateX(5%)
