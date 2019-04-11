@@ -3,6 +3,8 @@ import '../css/style.sass'
 // import '../css/Nav.css'
 import {NavLink} from 'react-router-dom';
 
+import img from '../img/wave.png'
+
 let prevScrollpos = window.pageYOffset;
 
 class Nav extends React.Component {
@@ -74,6 +76,7 @@ class Nav extends React.Component {
             <span className={activeNav ? 'top bar active' : 'top bar'}></span>
             <span className={activeNav ? 'mid bar active' : 'mid bar'}></span>
             <span className={activeNav ? 'bot bar active' : 'bot bar'}></span>
+            
         </button>
       
         <nav className={activeNav ? 'active' : ''}>
@@ -83,6 +86,7 @@ class Nav extends React.Component {
                 <NavLink to='/place' onClick={this.state.flag ? this.handleClick : null}><li><span className={active ? 'number active' : 'number'}>03</span><span className={active ? 'txt active' : 'txt'}>Gdzie nas znajdziesz</span></li></NavLink>
                 <NavLink to='/contact' onClick={this.state.flag ? this.handleClick : null}><li><span className={active ? 'number active' : 'number'}>04</span><span className={active ? 'txt active' : 'txt'}>Kontakt</span></li></NavLink>
             </ul>
+            {window.innerWidth>1280 ? <img src={img} alt=""/> : ''}
         </nav>
         </>
           );
