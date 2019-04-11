@@ -12,6 +12,11 @@ let conHeights = [];
 let txtHeights = [];
 
 class OfferComputer extends React.Component {
+
+    addEvent = () =>{
+        window.addEventListener('scroll', this.moveText)
+    }
+
     text1 = React.createRef();
     text2 = React.createRef();
     container1 = React.createRef();
@@ -22,7 +27,7 @@ class OfferComputer extends React.Component {
         this.texts.forEach((txt,i) => {
             const value = conHeights[i] + conOffs[i] - txtHeights[i]-30;
             // console.log(value)
-            console.log(conHeights[i],conOffs[i],value,scrollValue)
+
             if(conOffs[i]<scrollValue && value>scrollValue){
                 txt.current.style.position = 'fixed';
                 txt.current.style.width = 30 + '%';
@@ -54,7 +59,7 @@ class OfferComputer extends React.Component {
             conHeights.push(con.current.offsetHeight)
             conOffs.push(con.current.getBoundingClientRect().top)
         })
-        window.addEventListener('scroll', this.moveText)
+        setTimeout(this.addEvent,100);
     }
     componentWillUnmount(){
         window.removeEventListener('scroll', this.moveText)
