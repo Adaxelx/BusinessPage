@@ -44,6 +44,7 @@ class OfferComputer extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         const containers = [this.container1,this.container2]
         this.texts.forEach(txt =>{
             txtHeights.push(txt.current.offsetHeight)

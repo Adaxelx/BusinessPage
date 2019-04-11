@@ -10,6 +10,10 @@ class Place extends React.Component {
         active: false,
      }
 
+     addEvent = () =>{
+        window.addEventListener('scroll',this.handleScroll)
+     }
+
      addClass = () =>{
          this.setState({
              active: true,
@@ -27,10 +31,9 @@ class Place extends React.Component {
                })
             }
             // else{
-            //     actives[i]= false;
             //     this.setState({
-            //         actives
-            //     })
+            //         active: false,
+            //    })
             // }
         }
      p = React.createRef();
@@ -38,7 +41,7 @@ class Place extends React.Component {
      componentDidMount(){
         window.scrollTo(0,0);
         setTimeout(this.handleScroll,2000)
-         window.addEventListener('scroll',this.handleScroll)
+        setTimeout(this.addEvent,100)
      }
     componentWillUnmount(){
         window.removeEventListener('scroll',this.handleScroll)

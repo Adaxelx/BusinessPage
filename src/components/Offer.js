@@ -18,6 +18,11 @@ class Offer extends React.Component {
             false,
         ],
      }
+
+     addEvent = () =>{
+        window.addEventListener('scroll',this.handleScroll)
+     }
+
      onLoad = () =>{
         const tabArticles = [this.articleRef,this.articleRef2,this.articleRef3]
         let transition = 1;
@@ -61,7 +66,7 @@ class Offer extends React.Component {
         window.scrollTo(0,0);
         this.onLoad();
         setTimeout(this.handleScroll,1700);
-        window.addEventListener('scroll', this.handleScroll);
+        setTimeout(this.addEvent,100);
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
